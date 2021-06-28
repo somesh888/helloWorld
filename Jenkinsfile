@@ -11,7 +11,7 @@ def loadProperties() {
 }
 
 pipeline {
-    agent {label "${properties.gem5k.nodeLabels}"}
+    agent any //{label "${properties.gem5k.nodeLabels}"}
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '15', numToKeepStr: '5')
     }
