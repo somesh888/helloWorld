@@ -6,7 +6,7 @@ def loadProperties() {
         checkout scm
         properties = readJSON file: "properties.json"
         echo "Product Properties File: properties.json"
-        loadProperties ()
+        //loadProperties ()
     }
 }
 
