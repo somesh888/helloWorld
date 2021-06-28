@@ -35,7 +35,8 @@ pipeline {
         }
         stage('cleanup') {
             steps {
-                cleanWs()
+                //cleanWs()
+                echo "${properties.gem5k.product_config}"
             }
         }
     }
