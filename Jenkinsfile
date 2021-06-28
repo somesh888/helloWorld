@@ -16,8 +16,8 @@ node('master') {
     stage('get propertiesFile') {
         checkout scm
 
-        def tmpInfo = readJSON file: "${propertiesFile}"
-        propertyInfo << tmpInfo
+        def propertyInfo = readJSON file: "${propertiesFile}"
+        //propertyInfo << tmpInfo
     }
 }
 
