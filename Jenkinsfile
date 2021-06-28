@@ -16,6 +16,21 @@ pipeline {
                 }
             }
         }
+        stage('checkout') {
+            agent {label "${properties.nodeLabels}"}
+            parallel {
+                stage('one') {
+                    steps {
+                        echo "${properties.wr_path}"
+                    }
+                }
+                stage('two') {
+                    steps {
+                        echo "${properties.wr_arch}"
+                    }
+                }
+            }
+        }
         stage('cleanup') {
             steps {
                 echo "${properties.product_config}"
