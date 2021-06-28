@@ -17,9 +17,10 @@ pipeline {
             }
         }
         stage('checkout') {
-            agent {label "${properties.nodeLabels}"}
+            //agent {label "${properties.nodeLabels}"}
             parallel {
                 stage('one') {
+                    agent {label "${properties.nodeLabels}"}
                     steps {
                         echo "${properties.wr_path}"
                     }
