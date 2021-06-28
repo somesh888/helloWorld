@@ -6,11 +6,12 @@ def loadProperties() {
         checkout scm
         properties = readJSON file: "properties.json"
         echo "Product Properties File: properties.json"
+        loadProperties ()
     }
 }
 
 pipeline {
-    agent any
+    agent {label "${properties.gem5k.nodeLabels}"}
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '15', numToKeepStr: '5')
     }
@@ -22,7 +23,7 @@ pipeline {
         stage('prep') {
             steps {
                 script {
-                    loadProperties()
+                    //loadProperties()
                     //def productType = "${productType}"
                     echo "${properties.gem5k.pollTime}"
                     echo "${buildType}"
