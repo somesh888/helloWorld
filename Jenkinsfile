@@ -1,3 +1,4 @@
+/*
 properties = null
 
 def loadProperties() {
@@ -9,6 +10,7 @@ def loadProperties() {
         //loadProperties ()
     }
 }
+*/
 
 pipeline {
     agent any //{label "${properties.gem5k.nodeLabels}"}
@@ -23,8 +25,9 @@ pipeline {
         stage('prep') {
             steps {
                 script {
-                    loadProperties()
+                    //loadProperties()
                     //def productType = "${productType}"
+                    properties = readJSON file: 'properties.json'
                     echo "${properties.gem5k.pollTime}"
                     echo "${buildType}"
                 }
