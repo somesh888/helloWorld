@@ -23,7 +23,7 @@ pipeline {
         stage('prep') {
             steps {
                 script {
-                    //loadProperties()
+                    loadProperties()
                     //def productType = "${productType}"
                     echo "${properties.gem5k.pollTime}"
                     echo "${buildType}"
