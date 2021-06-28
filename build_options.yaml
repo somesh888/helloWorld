@@ -1,0 +1,3 @@
+build_agent_label: "gem"
+build_technology: "gradle"
+release_branch: "master"
