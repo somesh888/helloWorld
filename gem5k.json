@@ -1,0 +1,9 @@
+{
+    "pollTime": "H 23 * * 1-5",
+    "nodeLabels": "build && gem5000 && linux && slave",
+    "product_config": "gem5k_v2.2.0_product.json",     
+    "wr_path": "/opt/build/wrlts18/wrlinux-std_32",
+    "wr_arch": "intel-x86-32",
+    "wrltsVersionNumber": "1-1-0",
+    "wrltsBuildNumber": "63"
+}
