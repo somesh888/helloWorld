@@ -15,7 +15,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh """
-                /home/jenkins/tomcat/apache-tomcat-9.0.58/bin/shutdown.sh
+                
                 cp webapp/target/webapp.war  /home/jenkins/tomcat/apache-tomcat-9.0.58/webapps
                 /home/jenkins/tomcat/apache-tomcat-9.0.58/bin/startup.sh
                 """
