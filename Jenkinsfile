@@ -12,5 +12,12 @@ pipeline {
                 """
             }
         }
+        stage('deploy') {
+            steps {
+                sh """
+                cp webapp/target/webapp.war  /opt/tomcat/apache-tomcat-9.0.58/webapps/
+                """
+            }
+        }
     }
 }
