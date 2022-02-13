@@ -15,7 +15,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh """
-                sudo cp webapp/target/webapp.war  /opt/tomcat/apache-tomcat-9.0.58/webapps/
+                cp webapp/target/webapp.war  /home/jenkins/tomcat/apache-tomcat-9.0.58/webapps
                 """
             }
         }
