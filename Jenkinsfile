@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh """
                 cp webapp/target/webapp.war  /home/ubuntu/apache-tomcat-9.0.56/webapps
-                /home/jenkins/tomcat/apache-tomcat-9.0.58/bin/startup.sh
+                /home/ubuntu/apache-tomcat-9.0.56/bin/startup.sh
                 """
             }   
         }
