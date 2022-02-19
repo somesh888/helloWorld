@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-    maven 'mvn'
+    maven 's_maven'
     }
     stages {
         stage('build') {
@@ -18,7 +18,7 @@ pipeline {
                 cp webapp/target/webapp.war  /home/jenkins/tomcat/apache-tomcat-9.0.58/webapps
                 /home/jenkins/tomcat/apache-tomcat-9.0.58/bin/startup.sh
                 """
-            }
+            }   
         }
     }
 }
