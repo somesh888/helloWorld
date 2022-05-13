@@ -22,7 +22,7 @@ pipeline {
         //choice choices: ['testBuild', 'devBuild', 'releaseBuild'], description: 'The specific type of build desired. devBuild is a standard nightly build, testBuild is a non-incrementing build, A releaseBuild removes the IUO flag from the build.', name: 'buildType'
     }
     stages {
-        stage('prep') {
+        stage('git-test') {
             steps {
                 script {
                     //loadProperties()
