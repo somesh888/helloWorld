@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('departure-cleanup') {
+        stage('cleanup') {
             steps {
                 //cleanWs()
                 echo "${properties.product_config}"
